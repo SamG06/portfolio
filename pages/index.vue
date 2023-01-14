@@ -15,12 +15,20 @@
 
       <h1>Uh...hi?</h1>
       <p>
-        I'm a web developer with experience in languages such as JavaScript, Python, and Django.
+        I'm a web developer with experience in languages such as JavaScript, Python (Django).
         I have become particularly interested in
         <LinkHoverPreview class="vue-link" hyper-link="https://vuejs.org//" link-name="Vue" /> &
         <LinkHoverPreview class="go-link" hyper-link="https://go.dev/" link-name="Go" /> recently, and love to explore new tools as I have always done throughout my career.
         I take pride in my adaptability and ability to thrive in diverse environments. My main goal is to continue  expanding my skills as a developer so I'm always up for new challenges!
       </p>
+    </section>
+    <section>
+      <h2>Technologies</h2>
+      <ul>
+        <li v-for="technology in technologies" :key="technology.name">
+          {{ technology.name }}
+        </li>
+      </ul>
     </section>
     <section>
       <div>
@@ -38,8 +46,27 @@
 </template>
 
 <script lang="ts" setup>
+import { link } from 'fs'
 import LinkHoverPreview from '~~/components/link-hover-preview.vue'
 
+interface Technology {
+  name: string;
+  link: string;
+}
+
+const technologies: Technology[] = [
+  { name: 'HTML', link: '' },
+  { name: 'CSS', link: '' },
+  { name: 'JavaScript', link: '' },
+  { name: 'Vue', link: '' },
+  { name: 'WebRTC', link: '' },
+  { name: 'Node', link: '' },
+  { name: 'PostgreSQL', link: '' },
+  { name: 'VsCode', link: '' },
+  { name: 'Pycharm', link: '' },
+  { name: 'Docker', link: '' },
+  { name: 'Git', link: '' }
+]
 const age = computed(() => {
   const today = new Date()
   const myBirthday = new Date('1999/08/06')
