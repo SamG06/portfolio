@@ -26,7 +26,7 @@
       <h2>Technologies</h2>
       <ul>
         <li v-for="technology in technologies" :key="technology.name">
-          {{ technology.name }}
+          <a :href="technology.link" target="_blank" rel="noopener noreferrer">{{ technology.name }}</a>
         </li>
       </ul>
     </section>
@@ -46,7 +46,6 @@
 </template>
 
 <script lang="ts" setup>
-import { link } from 'fs'
 import LinkHoverPreview from '~~/components/link-hover-preview.vue'
 
 interface Technology {
@@ -55,18 +54,19 @@ interface Technology {
 }
 
 const technologies: Technology[] = [
-  { name: 'HTML', link: '' },
-  { name: 'CSS', link: '' },
-  { name: 'JavaScript', link: '' },
-  { name: 'Vue', link: '' },
-  { name: 'WebRTC', link: '' },
-  { name: 'Node', link: '' },
-  { name: 'PostgreSQL', link: '' },
-  { name: 'VsCode', link: '' },
-  { name: 'Pycharm', link: '' },
-  { name: 'Docker', link: '' },
-  { name: 'Git', link: '' }
+  { name: 'HTML', link: 'https://html.spec.whatwg.org/' },
+  { name: 'CSS', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+  { name: 'JavaScript', link: 'https://javascript.info/' },
+  { name: 'Vue', link: 'https://vuejs.org/' },
+  { name: 'WebRTC', link: 'https://www.w3.org/TR/webrtc/' },
+  { name: 'Node', link: 'https://nodejs.org/en/' },
+  { name: 'PostgreSQL', link: 'https://www.postgresql.org/' },
+  { name: 'VsCode', link: 'https://code.visualstudio.com/' },
+  { name: 'Pycharm', link: 'https://www.jetbrains.com/pycharm/' },
+  { name: 'Docker', link: 'https://www.docker.com/' },
+  { name: 'Git', link: 'https://git-scm.com/' }
 ]
+
 const age = computed(() => {
   const today = new Date()
   const myBirthday = new Date('1999/08/06')
