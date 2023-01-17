@@ -11,8 +11,8 @@
     @focusout="hidePreview"
   > {{ props.linkName }}</a>
   <span ref="previewBox" class="preview-box">
-    <img src="https://placekitten.com/g/500/300" alt="cat placeholder">
-    Text here or something
+    <img :src="imageUrl" alt="placeholder">
+    <p>{{ urlText }}</p>
   </span>
 </template>
 
@@ -25,6 +25,14 @@ const props = defineProps({
   hyperLink: {
     type: String,
     default: 'https://samuelgraham.dev/'
+  },
+  imageUrl: {
+    type: String,
+    default: 'https://placekitten.com/g/500/300'
+  },
+  urlText: {
+    type: String,
+    default: 'Website Description'
   }
 })
 
@@ -47,7 +55,6 @@ const hidePreview = () => {
 <style scoped>
   .preview-box{
     opacity: 0;
-    display: none;
     touch-action: none;
     pointer-events: none;
     position: fixed;
@@ -55,10 +62,18 @@ const hidePreview = () => {
     width:90%;
     max-width: 200px;
     transition: opacity .2s;
+    background-color: #272727;
+    height: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    padding:10px;
+    font-size: 0.8em;
   }
 
   .preview-box img{
     width:100%;
+    height: 130px;
+    object-fit:cover;
   }
 
   .showing{
