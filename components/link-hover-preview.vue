@@ -12,6 +12,7 @@
   > {{ props.linkName }}</a>
   <span ref="previewBox" class="preview-box">
     <img :src="imageUrl" alt="placeholder">
+    {{ imageUrl }}
     <p>{{ urlText }}</p>
   </span>
 </template>
@@ -35,6 +36,22 @@ const props = defineProps({
     default: 'Website Description'
   }
 })
+
+const getImageUrl = () => new URL(`../assets/images/${props.imageUrl}`, import.meta.url).href
+
+const imageUrl = ref()
+
+onMounted(() => {
+  updateImageSrc()
+})
+
+watch(() => props.imageUrl, () => {
+  updateImageSrc()
+})
+
+function updateImageSrc () {
+  imageUrl.value = getImageUrl()
+}
 
 // Showing preview
 const previewBox = ref<HTMLSpanElement| null>(null)
