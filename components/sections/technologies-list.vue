@@ -21,6 +21,7 @@ const technologies: Technology[] = [
   { name: 'CSS', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
   { name: 'JavaScript', link: 'https://javascript.info/' },
   { name: 'Vue', link: 'https://vuejs.org/' },
+  { name: 'Nuxt', link: 'https://nuxt.com/' },
   { name: 'WebRTC', link: 'https://www.w3.org/TR/webrtc/' },
   { name: 'Node', link: 'https://nodejs.org/en/' },
   { name: 'PostgreSQL', link: 'https://www.postgresql.org/' },
