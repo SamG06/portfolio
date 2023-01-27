@@ -3,6 +3,7 @@
     <SectionsMainIntro />
     <SectionsTechnologiesList />
     <SectionsCareersList />
+    <SectionsProjectsList />
   </div>
 </template>
 
