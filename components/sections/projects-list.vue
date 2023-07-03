@@ -3,11 +3,6 @@
     <h2>My Projects</h2>
     <hr>
     <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
   </section>
 </template>
 

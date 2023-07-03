@@ -1,15 +1,12 @@
 <template>
   <div class="content">
+    <SectionsNavigationBar />
     <SectionsMainIntro />
     <SectionsTechnologiesList />
     <SectionsCareersList />
     <SectionsProjectsList />
   </div>
 </template>
-
-<script lang="ts" setup>
-
-</script>
 
 <style>
   .content{
@@ -19,6 +16,7 @@
     justify-content: center;
     margin-top: 1.8em;
     padding-bottom: 70px;
+    margin-top: 200px;
   }
 
   h3{
@@ -27,7 +25,7 @@
 
   main, section{
     width:90%;
-    max-width: 900px;
+    max-width: 1050px;
     margin-top: 2em;
   }
 

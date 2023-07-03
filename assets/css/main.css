@@ -1,3 +1,10 @@
+:root {
+    --light-text: #a389ee;
+    --off-white: #e1e1e1;
+    --sub-text: #8d8c8c;
+    --main-bg-color: #202020;
+}
+
 *{
     font-family: sans-serif;
     padding:0;
@@ -5,11 +12,26 @@
 }
 
 html{
-    background:#2e363b;
+    background: #202020;
     color: white;
 }
 
-:root {
-    --go-bg: #79d4fd;
-    --vue-bg: #42b883;
-}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0f0f0f;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #5539aa;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6042bb;
+  }
