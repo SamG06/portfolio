@@ -25,7 +25,7 @@ nav {
     align-items: center;
     position: fixed;
     top: 0;
-    background: var(--main-bg-color);
+    background-color: #202020;
     z-index: 500;
     display: flex;
     justify-content: center;

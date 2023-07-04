@@ -2,6 +2,7 @@
   <div class="content">
     <SectionsNavigationBar />
     <SectionsMainIntro />
+    <SectionsAboutMe />
     <SectionsTechnologiesList />
     <SectionsCareersList />
     <SectionsProjectsList />

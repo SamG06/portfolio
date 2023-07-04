@@ -5,19 +5,11 @@
         <div>
           <h1>
             Samuel Graham
-            {{ age }}
           </h1>
         </div>
       </div>
       <div class="intro-text">
         <p> JavaScript/Python Developer based in the United States.</p>
-        <!-- <p>
-          I'm a web developer with experience in languages such as JavaScript, Python (Django).
-          I have become particularly interested in
-          <LinkHoverPreview class="vue-link" hyper-link="https://vuejs.org/" image-url="vue-placeholder.webp" url-text="Vue's Main Site" link-name="Vue" /> &
-          <LinkHoverPreview class="go-link" hyper-link="https://go.dev/" image-url="golang-placeholder.png" url-text="Go's Main Site" link-name="Go" /> recently, and love to explore new tools as I have always done throughout my career.
-          I take pride in my adaptability and ability to thrive in diverse environments. My main goal is to continue  expanding my skills as a developer so I'm always up for new challenges!
-        </p> -->
       </div>
       <div class="intro-buttons">
         <a href="https://github.com/SamG06" target="_blank" rel="noopener noreferrer">About Me</a>

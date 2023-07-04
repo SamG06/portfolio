@@ -29,7 +29,7 @@
 }
 
 .terminal {
-  background: #3f2446;
+  background: var(--terminal-bg);
   width: 90%;
   max-width: 500px;
   height: 350px;
@@ -40,12 +40,15 @@
   overflow: hidden;
   font-size: 14px;
   min-height: 250px;
-  border: 1px solid #551d63;
+  border: 1px solid var(--highlight-border);
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23413259' fill-opacity='0.22' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
+.green-theme .terminal{
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%233e9d1c' fill-opacity='0.11' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
 .terminal-window-top {
-  background: #371c3e;
+  background: var(--main-bg-color);
   position: absolute;
   top: 0;
   left: 0;

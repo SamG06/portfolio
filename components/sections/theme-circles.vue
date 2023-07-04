@@ -1,12 +1,23 @@
 !!<template>
   <div class="theme-circles-section">
-    <div class="circle color-blue" />
-    <div class="circle color-green" />
-    <div class="circle color-purple" />
+    <div class="circle color-purple" @click="themeChange('purple-theme')" />
+    <div class="circle color-blue" @click="themeChange('blue-theme')" />
+    <div class="circle color-green" @click="themeChange('green-theme')" />
   </div>
 </template>
 
 <script setup>
+
+const currentTheme = ref('purple-theme')
+
+function themeChange (theme) {
+  document.documentElement.classList.replace(currentTheme.value, theme)
+  currentTheme.value = theme
+}
+
+onMounted(() => {
+  document.documentElement.classList.add(currentTheme.value)
+})
 
 </script>
 
@@ -22,7 +33,7 @@
 }
 .circle{
     background-color: #ffffff;
-    border-radius: 100%;
+    border-radius: 5px;
     width: 30px;
     height: 30px;
     transition: transform .2s;
@@ -30,7 +41,7 @@
 }
 
 .circle:hover{
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 .color-blue{

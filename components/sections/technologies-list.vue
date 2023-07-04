@@ -34,6 +34,9 @@ const technologies: Technology[] = [
 </script>
 
 <style scoped>
+  h2{
+    margin-bottom: 20px;
+  }
   .technologies-list{
     list-style: none;
     display: flex;
@@ -42,9 +45,12 @@ const technologies: Technology[] = [
   }
 
   .technologies-list li{
-    background-color: gray;
+    background-color: rgb(27, 27, 27);
+    text-align: center;
+    border-radius: 10px;
     padding: 10px;
     width:100%;
+    border: 1px solid rgb(43, 43, 43);
   }
 
   .technologies-list a{
